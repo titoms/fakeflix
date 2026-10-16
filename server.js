@@ -10,10 +10,10 @@ const path = require('node:path');
 
 // Mode formateur : false = algorithme des élèves (recommender.js),
 // true = solution de référence (recommender.solution.js). Pris en compte au redémarrage.
-const USE_CORRECTION = false;
+const USE_CORRECTION = true;
 
-// const { recommendMovies } = require(USE_CORRECTION ? './recommender.solution' : './recommender');
-const { recommendMovies } = require('./recommender');
+const { recommendMovies } = require(USE_CORRECTION ? './recommender.solution' : './recommender');
+// const { recommendMovies } = require('./recommender');
 
 const PORT = Number(process.env.PORT) || 3000;
 const MAX_RECOMMENDATIONS = 5;
